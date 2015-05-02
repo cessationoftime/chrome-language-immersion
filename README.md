@@ -3,6 +3,6 @@ Language Immersion for Chrome is an experimental extension that aims to simulate
 
 ## ccv notes
 
-LIT is under content scripts under sources> Language Immersion
+lit.js (the script that controls translation) can be debugged in google chrome by going under the developer tools and finding the  content scripts section and looking at sources > Language Immersion
 
 If the program gets stuck translating look at "finalizeTranslation lit.js:376"

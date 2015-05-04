@@ -648,6 +648,11 @@ LIT.Replacement = {
                 var workingIndex = compiledData.length - 1;
                 var workingSentence = compiledData[workingIndex].original;
 
+				// skip if the chunkObj translation data is undefined			
+				if(typeof chunkObj[2][0] === 'undefined'){
+				  continue;
+                };
+				
                 var chunk = {
                     substrStart: chunkObj[3][0][0],
                     substrEnd: chunkObj[3][0][1],

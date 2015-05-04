@@ -645,15 +645,21 @@ LIT.Replacement = {
                     continue;
                 }
 
+				// skip if the chunkObj translation data is undefined			
+				if(typeof chunkObj[2][0] === 'undefined'){
+				  continue;
+                };
+				
                 var workingIndex = compiledData.length - 1;
-                var workingSentence = compiledData[workingIndex].original;
-
+                var workingSentence = compiledData[workingIndex].original;			
+				
                 var chunk = {
                     substrStart: chunkObj[3][0][0],
                     substrEnd: chunkObj[3][0][1],
                     translated: chunkObj[2][0][0],
                     fuzzyOriginal: chunkObj[0]
                 };
+				
                 chunk.original = workingSentence.substring(chunk.substrStart, chunk.substrEnd);
 
 
